@@ -7,10 +7,11 @@
 }
 
 body {
-  height: 100vh;
+  height: calc(100% - constant(safe-area-inset-bottom)); /* Fallback for older browsers */
+  height: calc(100% - env(safe-area-inset-bottom)); /* Safari 11.1+ */
   background-color: #121818;
   /* background: linear-gradient(135deg, #8052ec, #d161ff); */
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 html {
@@ -33,7 +34,8 @@ html {
 }
 
 .inner {
-  height: calc(100vh - 100px);
+  margin-top: 30px;
+  height: calc(100% - 100px);
   position: relative;
   display: flex;
   align-items: center;
@@ -66,7 +68,7 @@ html {
   font-size: 12vmin;
   color: #d161ff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  font-family: cursive;
+  font-family: Cantarell;
 }
 
 #restart {
