@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading">Tic Tac Toe</h1>
+    </header>
+    <section class="inner">
+      <div id="wrapper" class="wrapper">
+        <div class="container">
+          <button class="button-option"></button>
+          <button class="button-option"></button>
+          <button class="button-option"></button>
+          <button class="button-option"></button>
+          <button class="button-option"></button>
+          <button class="button-option"></button>
+          <button class="button-option"></button>
+          <button class="button-option"></button>
+          <button class="button-option"></button>
+        </div>
+        <div class="info">
+          <button id="restart">Back</button>
+          <div>
+            <div>
+              <p id="p1">Player 1</p>
+              <span id="score1" class="score">Score: 0</span>
+            </div>
+            <div>
+              <p id="p2">Player 2</p>
+              <span id="score2" class="score"> Score: 0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup popup-msg hide">
+        <p id="message">Sample Message</p>
+        <button id="new-game">New Game</button>
+      </div>
+
+      <div id="player-form" class="popup">
+        <form id="game-setup" class="game-setup">
+          <div class="input-group">
+            <label for="player1">Player 1: </label>
+            <input type="text" id="player1" name="player1" required />
+          </div>
+          <div class="input-group">
+            <label for="player2">Player 2: </label>
+            <input type="text" id="player2" name="player2" required />
+          </div>
+          <div class="input-group">
+            <label for="max-score">Max Score: </label>
+            <input type="number" id="max-score" name="max-score" min="1" required />
+          </div>
+          <button type="submit">Start Game</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
